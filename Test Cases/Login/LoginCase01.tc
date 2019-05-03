@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>LoginCase01</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>8397de18-6c18-4bd4-83aa-fca26daa1646</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>4d37bdf4-6a83-48f4-a279-38613cf4145e</id>
+      <masked>false</masked>
+      <name>errorText</name>
+   </variable>
+   <variable>
+      <defaultValue>'Login failed! Please ensure the username and password are valid.'</defaultValue>
+      <description></description>
+      <id>4ea72066-2deb-46dc-b30e-72e912072f8c</id>
+      <masked>false</masked>
+      <name>expectedErrorText</name>
+   </variable>
+</TestCaseEntity>
