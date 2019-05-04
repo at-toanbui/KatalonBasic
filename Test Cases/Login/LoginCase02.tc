@@ -5,4 +5,18 @@
    <tag></tag>
    <comment></comment>
    <testCaseGuid>3058d918-f162-4274-bc8a-d0508e944cfb</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>7260eb0d-88e1-4894-be8a-42b05c240db4</id>
+      <masked>false</masked>
+      <name>errorText</name>
+   </variable>
+   <variable>
+      <defaultValue>'Login failed! Please ensure the username and password are valid.'</defaultValue>
+      <description></description>
+      <id>3901fa00-c60b-4285-9b58-d49772b02883</id>
+      <masked>false</masked>
+      <name>expectedErrorText</name>
+   </variable>
 </TestCaseEntity>
