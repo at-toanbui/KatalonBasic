@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>CustomKey1</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>368f46f1-71af-433a-8040-c395eb700a42</testCaseGuid>
+   <variable>
+      <defaultValue>findTestObject('LoginPage/txbUsername')</defaultValue>
+      <description></description>
+      <id>0af365de-a815-4741-9285-d259908895b1</id>
+      <masked>false</masked>
+      <name>userLocator</name>
+   </variable>
+   <variable>
+      <defaultValue>findTestObject('LoginPage/txbPassword')</defaultValue>
+      <description></description>
+      <id>82836e97-df9d-4da2-9f10-da0633072494</id>
+      <masked>false</masked>
+      <name>passLocator</name>
+   </variable>
+</TestCaseEntity>
