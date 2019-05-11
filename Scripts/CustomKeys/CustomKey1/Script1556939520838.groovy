@@ -13,7 +13,7 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-CustomKeywords.'keyworddemo.customSendKeys.sendKeyUserAndPass'(findTestObject('LoginPage/txbUsername'), findTestObject('LoginPage/txbPassword'), 
+CustomKeywords.'keyworddemo.customKeys.sendKeyUserAndPass'(findTestObject('LoginPage/txbUsername'), findTestObject('LoginPage/txbPassword'), 
     'John Doe', 'ThisIsNotAPassword')
 
 WebUI.click(findTestObject('LoginPage/btnLogin'))
