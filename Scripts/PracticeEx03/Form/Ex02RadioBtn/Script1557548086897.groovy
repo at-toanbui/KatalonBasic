@@ -12,16 +12,11 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.Keys as Keys
 
-WebUI.sendKeys(findTestObject('LoginPage/txbUsername'), 'John Doe')
+WebUI.navigateToUrl('https://www.seleniumeasy.com/test/basic-radiobutton-demo.html')
 
-WebUI.sendKeys(findTestObject('LoginPage/txbPassword'), 'ThisIsNotAPassword')
+WebUI.click(findTestObject('SeleniumEasyDemoPage/rdMaleBtn'))
 
-WebUI.click(findTestObject('LoginPage/btnLogin'), FailureHandling.STOP_ON_FAILURE)
-
-WebUI.waitForElementVisible(findTestObject('HomePage/txtMakeAppointmentHome'), GlobalVariable.TIMEOUTMIN)
-
-WebUI.verifyElementVisible(findTestObject('HomePage/txtMakeAppointmentHome'))
-
-CustomKeywords.'keyworddemo.test.sendUserAndPassword'('')
+WebUI.verifyElementChecked(findTestObject('SeleniumEasyDemoPage/rdMaleBtn'), GlobalVariable.TIMEOUTMIN)
 

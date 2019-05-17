@@ -13,15 +13,15 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.sendKeys(findTestObject('LoginPage/txbUsername'), 'John Doe')
+WebUI.navigateToUrl('https://www.toolsqa.com/automation-practice-switch-windows/')
 
-WebUI.sendKeys(findTestObject('LoginPage/txbPassword'), 'ThisIsNotAPassword')
+WebUI.click(findTestObject('Object Repository/ToolSqa/btnEl_NewBrowserWindow'))
 
-WebUI.click(findTestObject('LoginPage/btnLogin'), FailureHandling.STOP_ON_FAILURE)
+WebUI.switchToWindowTitle('Free QA Automation Tools Tutorial for Beginners with Examples')
 
-WebUI.waitForElementVisible(findTestObject('HomePage/txtMakeAppointmentHome'), GlobalVariable.TIMEOUTMIN)
+WebUI.click(findTestObject('Object Repository/ToolSqa/btn_MenuOnNewWindow'))
 
-WebUI.verifyElementVisible(findTestObject('HomePage/txtMakeAppointmentHome'))
+WebUI.click(findTestObject('Object Repository/ToolSqa/btn_CloseMenu'))
 
-CustomKeywords.'keyworddemo.test.sendUserAndPassword'('')
+WebUI.closeWindowTitle('Free QA Automation Tools Tutorial for Beginners with Examples')
 

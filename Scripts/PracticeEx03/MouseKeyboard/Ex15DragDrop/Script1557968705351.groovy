@@ -13,15 +13,7 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.sendKeys(findTestObject('LoginPage/txbUsername'), 'John Doe')
+WebUI.navigateToUrl('http://demo.guru99.com/test/drag_drop.html')
 
-WebUI.sendKeys(findTestObject('LoginPage/txbPassword'), 'ThisIsNotAPassword')
-
-WebUI.click(findTestObject('LoginPage/btnLogin'), FailureHandling.STOP_ON_FAILURE)
-
-WebUI.waitForElementVisible(findTestObject('HomePage/txtMakeAppointmentHome'), GlobalVariable.TIMEOUTMIN)
-
-WebUI.verifyElementVisible(findTestObject('HomePage/txtMakeAppointmentHome'))
-
-CustomKeywords.'keyworddemo.test.sendUserAndPassword'('')
+WebUI.dragAndDropToObject(findTestObject('DemoGuru/dragEl_5000'), findTestObject('DemoGuru/dropEl_5000'))
 

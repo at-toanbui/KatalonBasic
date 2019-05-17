@@ -13,5 +13,15 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
+WebUI.navigateToUrl('http://demo.guru99.com/test/simple_context_menu.html')
+
+WebUI.rightClick(findTestObject('DemoGuru/btnRightClickMe'))
+
+WebUI.click(findTestObject('DemoGuru/btnCopyOnRightClick'))
+
+WebUI.acceptAlert()
+
+WebUI.doubleClick(findTestObject('DemoGuru/btnDoubleClickMe'))
+
 WebUI.acceptAlert()
 

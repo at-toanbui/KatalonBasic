@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Variable</name>
+   <name>Ex20Upload</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>112fb1a4-85b1-4897-936e-8540b86475bc</testCaseGuid>
@@ -10,6 +10,13 @@
       <description></description>
       <id>391f0a0c-a5f4-4bc3-beee-d336c53d1f00</id>
       <masked>false</masked>
-      <name>variable</name>
+      <name>filePath</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>2a14685f-c7ed-4d26-b036-5d64acd97ac5</id>
+      <masked>false</masked>
+      <name>textResult</name>
    </variable>
 </TestCaseEntity>

@@ -13,15 +13,9 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.sendKeys(findTestObject('LoginPage/txbUsername'), 'John Doe')
+WebUI.navigateToUrl('http://demo.guru99.com/test/tooltip.html')
 
-WebUI.sendKeys(findTestObject('LoginPage/txbPassword'), 'ThisIsNotAPassword')
+WebUI.mouseOver(findTestObject('DemoGuru/btnDownloadNow'))
 
-WebUI.click(findTestObject('LoginPage/btnLogin'), FailureHandling.STOP_ON_FAILURE)
-
-WebUI.waitForElementVisible(findTestObject('HomePage/txtMakeAppointmentHome'), GlobalVariable.TIMEOUTMIN)
-
-WebUI.verifyElementVisible(findTestObject('HomePage/txtMakeAppointmentHome'))
-
-CustomKeywords.'keyworddemo.test.sendUserAndPassword'('')
+WebUI.verifyElementText(findTestObject('DemoGuru/txtWhatNewOnTooltip'), 'What\'s new in 3.2')
 

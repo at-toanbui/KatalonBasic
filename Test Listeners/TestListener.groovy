@@ -30,8 +30,6 @@ class TestListener {
 	@BeforeTestCase
 	def sampleBeforeTestCase(TestCaseContext testCaseContext) {
 		println testCaseContext.getTestCaseId()
-		WebUI.openBrowser('');
-		WebUI.navigateToUrl(GlobalVariable.URL);
 	}
 
 	/**
@@ -40,8 +38,6 @@ class TestListener {
 	 */
 	@AfterTestCase
 	def sampleAfterTestCase(TestCaseContext testCaseContext) {
-		println testCaseContext.getTestCaseId()
-		WebUI.closeBrowser();
 	}
 
 	/**

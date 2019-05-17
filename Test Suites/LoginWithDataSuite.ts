@@ -16,7 +16,7 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/DatafileExample/DataFileCase01</testCaseId>
       <testDataLink>
-         <combinationType>ONE</combinationType>
+         <combinationType>MANY</combinationType>
          <id>8634bedc-e3a4-4967-a6a0-117802e20fcb</id>
          <iterationEntity>
             <iterationType>ALL</iterationType>

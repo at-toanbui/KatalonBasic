@@ -13,15 +13,21 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.sendKeys(findTestObject('LoginPage/txbUsername'), 'John Doe')
+WebUI.openBrowser('')
 
-WebUI.sendKeys(findTestObject('LoginPage/txbPassword'), 'ThisIsNotAPassword')
+WebUI.navigateToUrl('https://tus.io/demo.html')
 
-WebUI.click(findTestObject('LoginPage/btnLogin'), FailureHandling.STOP_ON_FAILURE)
+String userDir = System.getProperty('user.dir')
 
-WebUI.waitForElementVisible(findTestObject('HomePage/txtMakeAppointmentHome'), GlobalVariable.TIMEOUTMIN)
+String filePath = userDir + '/Image/imageExample.png'
 
-WebUI.verifyElementVisible(findTestObject('HomePage/txtMakeAppointmentHome'))
+WebUI.sendKeys(findTestObject('Upload/btn_ChooseFile'), filePath)
 
-CustomKeywords.'keyworddemo.test.sendUserAndPassword'('')
+WebUI.waitForElementVisible(findTestObject('Upload/txt_UploadSuccess'), GlobalVariable.TIMEOUTMIN)
+
+String textResult = WebUI.getText(findTestObject('Upload/txt_UploadSuccess'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.verifyElementText(findTestObject('Upload/txt_UploadSuccess'), 'DOWNLOAD IMAGEEXAMPLE.PNG (16641 BYTES)')
+
+WebUI.closeBrowser()
 

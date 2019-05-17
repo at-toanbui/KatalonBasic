@@ -13,15 +13,17 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.sendKeys(findTestObject('LoginPage/txbUsername'), 'John Doe')
+WebUI.navigateToUrl('https://www.toolsqa.com/handling-alerts-using-selenium-webdriver/')
 
-WebUI.sendKeys(findTestObject('LoginPage/txbPassword'), 'ThisIsNotAPassword')
+WebUI.scrollToElement(findTestObject('ToolSqa/btnSimpleAlert'), GlobalVariable.TIMEOUTMIN)
 
-WebUI.click(findTestObject('LoginPage/btnLogin'), FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('ToolSqa/button_Confirm Pop up'))
 
-WebUI.waitForElementVisible(findTestObject('HomePage/txtMakeAppointmentHome'), GlobalVariable.TIMEOUTMIN)
+WebUI.dismissAlert()
 
-WebUI.verifyElementVisible(findTestObject('HomePage/txtMakeAppointmentHome'))
+WebUI.click(findTestObject('ToolSqa/button_Prompt Pop up'))
 
-CustomKeywords.'keyworddemo.test.sendUserAndPassword'('')
+WebUI.setAlertText('YES')
+
+WebUI.acceptAlert()
 

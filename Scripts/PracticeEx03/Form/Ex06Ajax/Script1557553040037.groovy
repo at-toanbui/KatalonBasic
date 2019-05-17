@@ -13,15 +13,15 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.sendKeys(findTestObject('LoginPage/txbUsername'), 'John Doe')
+WebUI.navigateToUrl('https://www.seleniumeasy.com/test/ajax-form-submit-demo.html')
 
-WebUI.sendKeys(findTestObject('LoginPage/txbPassword'), 'ThisIsNotAPassword')
+WebUI.setText(findTestObject('Object Repository/SeleniumEasyDemoPage/txbName'), 'automation')
 
-WebUI.click(findTestObject('LoginPage/btnLogin'), FailureHandling.STOP_ON_FAILURE)
+WebUI.setText(findTestObject('Object Repository/SeleniumEasyDemoPage/txaComment'), 'test')
 
-WebUI.waitForElementVisible(findTestObject('HomePage/txtMakeAppointmentHome'), GlobalVariable.TIMEOUTMIN)
+WebUI.click(findTestObject('Object Repository/SeleniumEasyDemoPage/btnSubmitAjax'))
 
-WebUI.verifyElementVisible(findTestObject('HomePage/txtMakeAppointmentHome'))
+WebUI.waitForElementVisible(findTestObject('Object Repository/SeleniumEasyDemoPage/txtFormAjaxSuccess'), GlobalVariable.TIMEOUTMIN)
 
-CustomKeywords.'keyworddemo.test.sendUserAndPassword'('')
+WebUI.verifyElementVisible(findTestObject('SeleniumEasyDemoPage/txtFormAjaxSuccess'))
 
