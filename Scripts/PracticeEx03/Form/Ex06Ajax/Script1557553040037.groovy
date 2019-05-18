@@ -13,6 +13,8 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
+WebUI.openBrowser('')
+
 WebUI.navigateToUrl('https://www.seleniumeasy.com/test/ajax-form-submit-demo.html')
 
 WebUI.setText(findTestObject('Object Repository/SeleniumEasyDemoPage/txbName'), 'automation')
@@ -21,7 +23,7 @@ WebUI.setText(findTestObject('Object Repository/SeleniumEasyDemoPage/txaComment'
 
 WebUI.click(findTestObject('Object Repository/SeleniumEasyDemoPage/btnSubmitAjax'))
 
-WebUI.waitForElementVisible(findTestObject('Object Repository/SeleniumEasyDemoPage/txtFormAjaxSuccess'), GlobalVariable.TIMEOUTMIN)
+WebUI.waitForElementNotPresent(findTestObject('SeleniumEasyDemoPage/img_AjaxLoading'), GlobalVariable.TIMEOUTMIN)
 
-WebUI.verifyElementVisible(findTestObject('SeleniumEasyDemoPage/txtFormAjaxSuccess'))
+WebUI.verifyElementText(findTestObject('SeleniumEasyDemoPage/txtFormAjaxSuccess'), 'Form submited Successfully!')
 
